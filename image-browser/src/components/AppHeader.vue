@@ -1,6 +1,6 @@
 <template>
-  <div class="navbar">
-    Image Storage
+  <div class="ui secondary pointing menu">
+    <a href="/" class="active item">Image Storage</a>
   </div>
 </template>
 
