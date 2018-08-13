@@ -1,9 +1,15 @@
 <template>
-  <h3>Test Image App</h3>
+  <div class="app">
+    <AppHeader></AppHeader>
+  </div>
 </template>
 
 <script>
+import AppHeader from  './components/AppHeader'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    AppHeader
+  }
 }
 </script>
