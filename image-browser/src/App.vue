@@ -1,27 +1,9 @@
 <template>
-  <div id="app">
-    <Test/>
-  </div>
+  <h3>Test Image App</h3>
 </template>
 
 <script>
-import Test from './components/Test.vue'
-
 export default {
-  name: 'app',
-  components: {
-    Test
-  }
+  name: 'App'
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
