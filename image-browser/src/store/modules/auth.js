@@ -11,6 +11,12 @@ const actions = {
 
 }
 
+// in any mutation, state is always the first argument,
+// followed by as many as necessary. In this case, since the
+// the property being mutated is token, we pass that in as
+// the second argument
 const mutations = {
-
+  setToken: (state, token) => {
+    state.token = token
+  }
 }
