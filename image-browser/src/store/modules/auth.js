@@ -7,8 +7,9 @@ const getters = {
 }
 
 const actions = {
-
-
+  logout: ({ commit }) => {
+    commit('setToken', null)
+  }
 }
 
 // in any mutation, state is always the first argument,
