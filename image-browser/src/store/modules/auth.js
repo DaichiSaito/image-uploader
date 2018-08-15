@@ -28,3 +28,10 @@ const mutations = {
     state.token = token
   }
 }
+
+export default {
+  state, // ES6 equivalent of state: state,
+  getters, // "  " getters: getters,
+  actions, // etc
+  mutations
+}
