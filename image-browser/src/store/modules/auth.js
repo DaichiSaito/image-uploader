@@ -1,3 +1,5 @@
+import api from '../../api/imgur'
+
 const state = {
   token: null // initial value of token at page load
 }
@@ -9,6 +11,9 @@ const getters = {
 // actions call mutations. They always require an object with at least the commit property
 // the commit property is required to call mutations, the whole purpose of actions
 const actions = {
+  login: () => {
+    api.login()
+  },
   logout: ({ commit }) => {
     commit('setToken', null)
   }
