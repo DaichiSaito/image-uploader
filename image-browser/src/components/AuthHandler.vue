@@ -12,7 +12,7 @@ export default {
   methods: mapActions(['finalizeLogin']),
   created() { 
     // Vue lifecycle method
-    this.finalizeLogin(window.location.hash)
+    this.finalizeLogin(window.location.hash) // pass everything to the right of #
   }
 }
 </script>

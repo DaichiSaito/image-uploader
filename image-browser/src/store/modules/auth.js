@@ -1,4 +1,5 @@
 import api from '../../api/imgur'
+import qs from 'qs' // to parse the url query string
 
 const state = {
   token: null // initial value of token at page load
@@ -13,6 +14,11 @@ const getters = {
 const actions = {
   login: () => {
     api.login()
+  },
+  finalizeLogin({ commit }, hash) {
+    // get the access token from the url
+    const query = qs.parse(hash.replace('#', '')) //parse the query string, remove hash
+    commit('setToken', query.access_token)
   },
   logout: ({ commit }) => {
     commit('setToken', null)
