@@ -12,17 +12,4 @@ PROJECT CHALLENGES/POSSIBLE SOLUTIONS
 4. Need user authentication
    SOLUTION IDEA: Use OAuth through the Imgur API
    
-## Project setup
-```
-npm install
-```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
