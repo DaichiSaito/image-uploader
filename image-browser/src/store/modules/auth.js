@@ -1,5 +1,6 @@
 import api from '../../api/imgur'
 import qs from 'qs' // to parse the url query string
+import { router } from '../../main'
 
 const state = {
   token: window.localStorage.getItem('imgur_token') // check to see if token is already in localStorage, thus user is already logged in
@@ -20,6 +21,9 @@ const actions = {
     const query = qs.parse(hash.replace('#', '')) //parse the query string, remove hash
     commit('setToken', query.access_token)
     window.localStorage.setItem('imgur_token', query.access_token)
+    // navigate to the root route after authentication
+    router.push('/')
+
   },
   logout: ({ commit }) => {
     commit('setToken', null)
