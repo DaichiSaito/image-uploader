@@ -2,7 +2,7 @@ import api from '../../api/imgur'
 import qs from 'qs' // to parse the url query string
 
 const state = {
-  token: null // initial value of token at page load
+  token: window.localStorage.getItem('imgur_token') // check to see if token is already in localStorage, thus user is already logged in
 }
 
 const getters = {
@@ -19,6 +19,7 @@ const actions = {
     // get the access token from the url
     const query = qs.parse(hash.replace('#', '')) //parse the query string, remove hash
     commit('setToken', query.access_token)
+    window.localStorage.setItem('imgur_token', query.access_token)
   },
   logout: ({ commit }) => {
     commit('setToken', null)
