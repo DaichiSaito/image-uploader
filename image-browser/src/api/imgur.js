@@ -1,3 +1,4 @@
+import axios from 'axios'
 import qs from 'qs'  // library to create query string for URL
 // this library takes an object and turns it into a query string
 // below, the constant querystring is an object w two properties.
@@ -14,5 +15,12 @@ export default {
       response_type: 'token'
     }
     window.location = `${ROOT_URL}/oauth2/authorize?${qs.stringify(querystring)}`
+  },
+  fetchImages(token) {
+    return axios.get(`${ROOT_URL}/3/account/me/images`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    })
   }
 }
