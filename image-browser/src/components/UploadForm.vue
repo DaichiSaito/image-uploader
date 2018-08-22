@@ -1,7 +1,7 @@
 <template>
   <div class="dropper">
-    <input type="file" class="drop-input"/>
-    <span>Drag Files Here</span>
+    <input type="file" @change="uploadImages" class="drop-input"/>
+    <span>Click to Browse or Drag Files Here</span>
   </div>
 </template>
 
