@@ -6,15 +6,17 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
-  name: 'UploadForm'
+  name: 'UploadForm',
+  methods: mapActions(['uploadImages'])
 }
 </script>
 
 <style>
 .dropper {
   height: 30vh;
-  border: 2px dashed black;
+  border: 1px dashed black;
   border-radius: 5px;
   display: flex;
   justify-content: center;

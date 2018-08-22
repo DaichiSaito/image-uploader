@@ -14,6 +14,9 @@ const actions = {
     const response = await api.fetchImages(token)
     //console.log(response) // test only
     commit('setImages', response.data.data) //first data is axios, 2nd is Imgur API
+  },
+  async uploadImages({ commit }, images) {
+    console.log(images)
   }
 }
 
