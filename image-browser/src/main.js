@@ -3,12 +3,16 @@ import VueRouter from 'vue-router' // get vue router library
 import App from './App'
 import store from './store'
 import AuthHandler from './components/AuthHandler'
+import ImageList from './components/ImageList'
+import UploadForm from './components/UploadForm'
 
 Vue.use(VueRouter) // tell vue to use the vue router
 
 export const router = new VueRouter({
   mode: 'history', // removes hash in
   routes: [
+    { path: '/', component: ImageList },
+    { path: '/upload', component: UploadForm },
     { path: '/oauth2/callback', component: AuthHandler }
   ]
 })
