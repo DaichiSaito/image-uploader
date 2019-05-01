@@ -5,7 +5,7 @@ import qs from 'qs'  // library to create query string for URL
 // qs will turn these two properties into a properly formed query string
 //  for use in forming the URL to which the user will be directed
 
-const CLIENT_ID = 'CLIENT_ID_HERE'
+const CLIENT_ID = process.env.VUE_APP_IMGUR_KEY
 const ROOT_URL = 'https://api.imgur.com'
 
 export default {
